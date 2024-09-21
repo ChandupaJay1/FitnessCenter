@@ -1396,3 +1396,35 @@ body {
   .footer-top .container { grid-template-columns: 1fr 0.6fr 0.9fr 1fr; }
 
 }
+
+
+
+/* Form Container */
+.form-container {
+  padding: 40px;
+  background-color: var(--white);
+  border-radius: var(--radius-10);
+  box-shadow: var(--shadow-1);
+}
+
+/* Form Sections */
+.form-section {
+  margin-bottom: 20px;
+}
+
+.input-field {
+  padding: 12px;
+  border: 1px solid var(--gainsboro);
+  border-radius: var(--radius-5);
+  margin-bottom: 15px;
+}
+
+/* Form Button */
+.form-footer {
+  text-align: center;
+}
+
+.form-footer .btn-primary {
+  background-color: var(--coquelicot);
+  color: var(--white);
+}

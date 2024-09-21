@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitlife - Krupal</title>
+
+    <!--favicon-->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!--custom css link-->
+    <!-- <link rel="stylesheet" href="./assets/css/regpay.css"> -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!--google font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap">
+
+    <!-- preload images-->
+    <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+    <link rel="preload" as="image" href="./assets/images/hero-circle-one.png">
+    <link rel="preload" as="image" href="./assets/images/hero-circle-two.png">
+    <link rel="preload" as="image" href="./assets/images/heart-rate.svg">
+    <link rel="preload" as="image" href="./assets/images/calories.svg">
+
+    <!-- EmailJS script -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script src="script.js" defer></script> -->
+
+</head>
+
+<body>
+
+    <div w3-include-html="./components/header.html"></div>
+
+    <section class="section class bg-dark has-bg-image" id="class" aria-label="class"
+        style="background-image: url('./assets/images/classes-bg.png')">
+        <div class="container">
+
+            <div class="form-container">
+                <div class="form-header">
+                    <h1 class="h2">Register for Lessons</h1>
+                    <p class="section-text">Fill in your details to register for your lessons and make payments.</p>
+                </div>
+
+                <form id="registrationForm" class="form-content">
+                    <div class="form-section">
+                        <h3 class="h3">Personal Information</h3>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required class="input-field">
+
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com" required
+                            class="input-field">
+
+                        <label for="mobile">Mobile Number</label>
+                        <input type="tel" id="mobile" name="mobile" placeholder="+1234567890" required
+                            class="input-field">
+                    </div>
+
+                    <!-- Lesson Information Section -->
+                    <div class="form-section">
+                        <h3 class="h3">Lesson Information</h3>
+                        <label for="lessonType">Lesson Type</label>
+                        <select id="lessonType" name="lessonType" required class="input-field">
+                            <option value="yoga">Yoga</option>
+                            <option value="swimming">Swimming</option>
+                            <option value="cooking">Cooking</option>
+                        </select>
+
+                        <label for="date">Lesson Date</label>
+                        <input type="date" id="date" name="date" required class="input-field">
+
+                        <label for="time">Lesson Time</label>
+                        <input type="time" id="time" name="time" required class="input-field">
+
+                        <label for="skillLevel">Skill Level</label>
+                        <select id="skillLevel" name="skillLevel" required class="input-field">
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+
+                        <label for="classType">Class Type</label>
+                        <select id="classType" name="classType" required class="input-field">
+                            <option value="group">Group Class</option>
+                            <option value="private">Private Class</option>
+                        </select>
+                    </div>
+
+                    <div class="form-footer">
+                        <button type="button" onclick="sendEmail()" class="btn btn-primary">Register and Send
+                            Email</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <div w3-include-html="./components/footer.html"></div>
+
+
+    <script src="./assets/js/script.js"></script>
+    <!--ionicon link-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        includeHeader();
+    </script>
+
+</body>
+
+</html>

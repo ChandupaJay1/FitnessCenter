@@ -36,13 +36,13 @@ To run **Fitlife** locally, run this command on your git bash:
 Linux and macOS:
 
 ```bash
-sudo git clone https://github.com/codewithsadee/fitlife.git
+sudo git clone git@github.com:ChandupaJay1/FitnessCenter.git
 ```
 
 Windows:
 
 ```bash
-git clone https://github.com/codewithsadee/fitlife.git
+git clone git@github.com:ChandupaJay1/FitnessCenter.git
 ```
 
 ### Contact

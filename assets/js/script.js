@@ -56,59 +56,85 @@ window.addEventListener("scroll", function () {
 // import header
 
 function includeHeader() {
-  var z, i, elmnt, file, xhttp;
-  /* Loop through a collection of all HTML elements: */
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
+  var elements = document.querySelectorAll("[w3-include-html]");
+
+  elements.forEach(function(elmnt) {
+    var file = elmnt.getAttribute("w3-include-html");
     if (file) {
-      /* Make an HTTP request using the attribute value as the file name: */
-      xhttp = new XMLHttpRequest();
+      var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /* Remove the attribute, and call this function once more: */
+          if (this.status == 200) {
+            elmnt.innerHTML = this.responseText;
+          }
+          if (this.status == 404) {
+            elmnt.innerHTML = "Page not found.";
+          }
           elmnt.removeAttribute("w3-include-html");
-          includeHeader();
         }
-      }
+      };
       xhttp.open("GET", file, true);
       xhttp.send();
-      /* Exit the function: */
-      return;
     }
-  }
+  });
 }
+
+// Call the function when the page loads
+document.addEventListener("DOMContentLoaded", includeHeader);
 
 // import footer
 
-function includeFooter() {
-  var z, i, elmnt, file, xhttp;
-  /* Loop through a collection of all HTML elements: */
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
+function includeComponents() {
+  var elements = document.querySelectorAll("[w3-include-html]");
+
+  elements.forEach(function(elmnt) {
+    var file = elmnt.getAttribute("w3-include-html");
     if (file) {
-      /* Make an HTTP request using the attribute value as the file name: */
-      xhttp = new XMLHttpRequest();
+      var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /* Remove the attribute, and call this function once more: */
+          if (this.status == 200) {
+            elmnt.innerHTML = this.responseText;
+          }
+          if (this.status == 404) {
+            elmnt.innerHTML = "Page not found.";
+          }
           elmnt.removeAttribute("w3-include-html");
-          includeFooter();
         }
-      }
+      };
       xhttp.open("GET", file, true);
       xhttp.send();
-      /* Exit the function: */
-      return;
     }
-  }
+  });
 }
+
+// Call the function when the page loads
+document.addEventListener("DOMContentLoaded", includeComponents);
+
+
+// Email sending function
+
+// EmailJS initialization and send email function
+// (function() {
+//   emailjs.init("service_8wp9apo"); // Replace with your EmailJS user ID
+// })();
+
+// function sendEmail() {
+//   var templateParams = {
+//       name: document.getElementById('name').value,
+//       email: document.getElementById('email').value,
+//       mobile: document.getElementById('mobile').value,
+//       lessonType: document.getElementById('lessonType').value,
+//       date: document.getElementById('date').value,
+//       time: document.getElementById('time').value,
+//       skillLevel: document.getElementById('skillLevel').value,
+//       classType: document.getElementById('classType').value
+//   };
+
+//   emailjs.send('service_8wp9apo', 'template_40wb4ea', templateParams)
+//       .then(function(response) {
+//           alert('Email sent successfully!');
+//       }, function(error) {
+//           alert('Failed to send email: ' + error);
+//       });
+// }
