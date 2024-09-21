@@ -5,30 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitlife - Krupal</title>
+    <title>Wellness Center - FAQ</title>
 
-    <!-- 
-    - favicon
-  -->
+    <!-- favicon-->
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
-    <!-- 
-    - custom css link
-  -->
+    <!--custom css link-->
     <link rel="stylesheet" href="./assets/css/style.css">
 
-    <!-- 
-    - google font link
-  -->
+    <!--google font link-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
         rel="stylesheet">
 
-    <!-- 
-    - preload images
-  -->
+    <!--preload images-->
     <link rel="preload" as="image" href="./assets/images/hero-banner.png">
     <link rel="preload" as="image" href="./assets/images/hero-circle-one.png">
     <link rel="preload" as="image" href="./assets/images/hero-circle-two.png">
@@ -38,8 +30,9 @@
 </head>
 
 <body>
-<!-- 
-    <div w3-include-html="./components/header.html"></div> -->
+
+    <!-- Header Include -->
+    <!-- <div w3-include-html="./components/header.html"></div> -->
 
     <header class="header" data-header>
         <div class="container">
@@ -89,193 +82,72 @@
         </div>
     </header>
 
-
-
-    <section class="section class bg-dark has-bg-image" id="class" aria-label="class"
-        style="background-image: url('./assets/images/classes-bg.png')">
+    <!-- FAQ Section -->
+    <section class="section faq bg-dark" id="faq" aria-label="FAQ">
         <div class="container">
+            <div class="section-header text-center">
+                <h1 class="h1">Frequently Asked Questions</h1>
+                <p class="section-text">Find answers to common questions below. If you still need help, feel free to reach out to us.</p>
+            </div>
 
-            <p class="section-subtitle">Our Services</p>
-
-            <h2 class="h2 section-title text-center">Fitness Classes For Every Goal</h2>
-
-            <ul class="class-list has-scrollbar">
-
-                <li class="scrollbar-item">
-                    <div class="class-card">
-
-                        <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
-                            <img src="./assets/images/class-1.jpg" width="416" height="240" loading="lazy"
-                                alt="Weight Lifting" class="img-cover">
-                        </figure>
-
-                        <div class="card-content">
-
-                            <div class="title-wrapper">
-                                <img src="./assets/images/class-icon-1.png" width="52" height="52" aria-hidden="true"
-                                    alt="" class="title-icon">
-
-                                <h3 class="h3">
-                                    <a href="#" class="card-title">Weight Lifting</a>
-                                </h3>
-                            </div>
-
-                            <p class="card-text">
-                                Suspendisse nisi libero, cursus ac magna sit amet, fermentum imperdiet nisi.
-                            </p>
-
-                            <div class="card-progress">
-
-                                <div class="progress-wrapper">
-                                    <p class="progress-label">Class Full</p>
-
-                                    <span class="progress-value">85%</span>
-                                </div>
-
-                                <div class="progress-bg">
-                                    <div class="progress-bar" style="width: 85%"></div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
+            <div class="faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 class="h3">What services do you offer?</h3>
+                        <span class="faq-toggle">
+                            <ion-icon name="add-outline"></ion-icon>
+                        </span>
                     </div>
-                </li>
-
-                <li class="scrollbar-item">
-                    <div class="class-card">
-
-                        <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
-                            <img src="./assets/images/class-2.jpg" width="416" height="240" loading="lazy"
-                                alt="Cardio & Strenght" class="img-cover">
-                        </figure>
-
-                        <div class="card-content">
-
-                            <div class="title-wrapper">
-                                <img src="./assets/images/class-icon-2.png" width="52" height="52" aria-hidden="true"
-                                    alt="" class="title-icon">
-
-                                <h3 class="h3">
-                                    <a href="#" class="card-title">Cardio & Strenght</a>
-                                </h3>
-                            </div>
-
-                            <p class="card-text">
-                                Suspendisse nisi libero, cursus ac magna sit amet, fermentum imperdiet nisi.
-                            </p>
-
-                            <div class="card-progress">
-
-                                <div class="progress-wrapper">
-                                    <p class="progress-label">Class Full</p>
-
-                                    <span class="progress-value">70%</span>
-                                </div>
-
-                                <div class="progress-bg">
-                                    <div class="progress-bar" style="width: 70%"></div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
+                    <div class="faq-answer">
+                        <p>We offer a wide range of services including fitness classes, personal training, nutrition coaching, and more.</p>
                     </div>
-                </li>
+                </div>
 
-                <li class="scrollbar-item">
-                    <div class="class-card">
-
-                        <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
-                            <img src="./assets/images/class-3.jpg" width="416" height="240" loading="lazy"
-                                alt="Power Yoga" class="img-cover">
-                        </figure>
-
-                        <div class="card-content">
-
-                            <div class="title-wrapper">
-                                <img src="./assets/images/class-icon-3.png" width="52" height="52" aria-hidden="true"
-                                    alt="" class="title-icon">
-
-                                <h3 class="h3">
-                                    <a href="#" class="card-title">Power Yoga</a>
-                                </h3>
-                            </div>
-
-                            <p class="card-text">
-                                Suspendisse nisi libero, cursus ac magna sit amet, fermentum imperdiet nisi.
-                            </p>
-
-                            <div class="card-progress">
-
-                                <div class="progress-wrapper">
-                                    <p class="progress-label">Class Full</p>
-
-                                    <span class="progress-value">90%</span>
-                                </div>
-
-                                <div class="progress-bg">
-                                    <div class="progress-bar" style="width: 90%"></div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 class="h3">How can I register for a class?</h3>
+                        <span class="faq-toggle">
+                            <ion-icon name="add-outline"></ion-icon>
+                        </span>
                     </div>
-                </li>
-
-                <li class="scrollbar-item">
-                    <div class="class-card">
-
-                        <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
-                            <img src="./assets/images/class-4.jpg" width="416" height="240" loading="lazy"
-                                alt="The Fitness Pack" class="img-cover">
-                        </figure>
-
-                        <div class="card-content">
-
-                            <div class="title-wrapper">
-                                <img src="./assets/images/class-icon-4.png" width="52" height="52" aria-hidden="true"
-                                    alt="" class="title-icon">
-
-                                <h3 class="h3">
-                                    <a href="#" class="card-title">The Fitness Pack</a>
-                                </h3>
-                            </div>
-
-                            <p class="card-text">
-                                Suspendisse nisi libero, cursus ac magna sit amet, fermentum imperdiet nisi.
-                            </p>
-
-                            <div class="card-progress">
-
-                                <div class="progress-wrapper">
-                                    <p class="progress-label">Class Full</p>
-
-                                    <span class="progress-value">60%</span>
-                                </div>
-
-                                <div class="progress-bg">
-                                    <div class="progress-bar" style="width: 60%"></div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
+                    <div class="faq-answer">
+                        <p>You can register for a class by filling out our online form available in the registration section. Once completed, you will receive an email confirmation.</p>
                     </div>
-                </li>
+                </div>
 
-            </ul>
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 class="h3">What payment methods do you accept?</h3>
+                        <span class="faq-toggle">
+                            <ion-icon name="add-outline"></ion-icon>
+                        </span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards, debit cards, and online payment services such as PayPal.</p>
+                    </div>
+                </div>
 
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 class="h3">Do you offer private training sessions?</h3>
+                        <span class="faq-toggle">
+                            <ion-icon name="add-outline"></ion-icon>
+                        </span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer private one-on-one training sessions tailored to your individual needs and goals.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-<!-- 
-    <div w3-include-html="./components/footer.html"></div> -->
+    <!-- Footer Include -->
+    <!-- <div w3-include-html="./components/footer.html"></div> -->
 
     <footer class="footer">
 
@@ -456,18 +328,25 @@
     
     </footer>
 
-
+    <!-- Custom Script -->
     <script src="./assets/js/script.js"></script>
-    <!-- 
-    - ionicon link
-  -->
+    <!--ionicon link-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-
-    <!-- <script>
-        includeComponents();
-    </script> -->
+    <script>
+        // includeComponents();
+        
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const faqItem = item.parentElement;
+                faqItem.classList.toggle('active');
+                const icon = faqItem.querySelector('.faq-toggle ion-icon');
+                icon.name = faqItem.classList.contains('active') ? 'remove-outline' : 'add-outline';
+            });
+        });
+    </script>
 </body>
 
 </html>

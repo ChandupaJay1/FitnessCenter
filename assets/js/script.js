@@ -53,45 +53,16 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// import header
-
-function includeHeader() {
-  var elements = document.querySelectorAll("[w3-include-html]");
-
-  elements.forEach(function(elmnt) {
-    var file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {
-            elmnt.innerHTML = this.responseText;
-          }
-          if (this.status == 404) {
-            elmnt.innerHTML = "Page not found.";
-          }
-          elmnt.removeAttribute("w3-include-html");
-        }
-      };
-      xhttp.open("GET", file, true);
-      xhttp.send();
-    }
-  });
-}
-
-// Call the function when the page loads
-document.addEventListener("DOMContentLoaded", includeHeader);
-
-// import footer
+// import footer/header 
 
 function includeComponents() {
   var elements = document.querySelectorAll("[w3-include-html]");
 
-  elements.forEach(function(elmnt) {
+  elements.forEach(function (elmnt) {
     var file = elmnt.getAttribute("w3-include-html");
     if (file) {
       var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
+      xhttp.onreadystatechange = function () {
         if (this.readyState == 4) {
           if (this.status == 200) {
             elmnt.innerHTML = this.responseText;
@@ -110,6 +81,50 @@ function includeComponents() {
 
 // Call the function when the page loads
 document.addEventListener("DOMContentLoaded", includeComponents);
+
+
+function includeHeader() {
+  var elements = document.querySelectorAll("[w3-include-html]");
+  elements.forEach(function (elmnt) {
+      var file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+          // First attempt with XMLHttpRequest
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+              if (this.readyState == 4) {
+                  if (this.status == 200) {
+                      elmnt.innerHTML = this.responseText;
+                  } else if (this.status == 404) {
+                      elmnt.innerHTML = "Page not found.";
+                  } else {
+                      loadContentFallback(file, elmnt);
+                  }
+                  elmnt.removeAttribute("w3-include-html");
+              }
+          };
+          xhttp.open("GET", file, true);
+          try {
+              xhttp.send();
+          } catch (err) {
+              loadContentFallback(file, elmnt);
+          }
+      }
+  });
+}
+
+function loadContentFallback(file, element) {
+  fetch(file)
+      .then(response => response.text())
+      .then(data => {
+          element.innerHTML = data;
+      })
+      .catch(error => {
+          console.error("Error loading file:", error);
+          element.innerHTML = "Content could not be loaded.";
+      });
+}
+
+
 
 
 // Email sending function

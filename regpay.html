@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitlife - Krupal</title>
+    <title>Wellness Center - Registration</title>
 
     <!--favicon-->
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
@@ -35,7 +35,55 @@
 
 <body>
 
-    <div w3-include-html="./components/header.html"></div>
+    <!-- <div w3-include-html="./components/header.html"></div> -->
+
+    <header class="header" data-header>
+        <div class="container">
+    
+            <a href="#" class="logo">
+                <ion-icon name="barbell-sharp" aria-hidden="true"></ion-icon>
+    
+                <span class="span">Wellness Center</span>
+            </a>
+    
+            <nav class="navbar" data-navbar>
+    
+                <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                    <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+                </button>
+    
+                <ul class="navbar-list">
+    
+                    <li>
+                        <a href="index.html" class="navbar-link active" data-nav-link>Home</a>
+                    </li>
+    
+                    <li>
+                        <a href="services.html" class="navbar-link" data-nav-link>Services</a>
+                    </li>
+    
+                    <li>
+                        <a href="./regpay.html" class="navbar-link" data-nav-link>Registration</a>
+                    </li>
+    
+                    <li>
+                        <a href="./faq.html" class="navbar-link" data-nav-link>FAQ</a>
+                    </li>
+    
+                </ul>
+    
+            </nav>
+    
+            <a href="#" class="btn btn-secondary">Join Now</a>
+    
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+    
+        </div>
+    </header>
 
     <section class="section class bg-dark has-bg-image" id="class" aria-label="class"
         style="background-image: url('./assets/images/classes-bg.png')">
@@ -103,8 +151,187 @@
     </section>
 
 
+<!-- 
+    <div w3-include-html="./components/footer.html"></div> -->
 
-    <div w3-include-html="./components/footer.html"></div>
+    <footer class="footer">
+
+        <div class="section footer-top bg-dark has-bg-image"
+            style="background-image: url('./assets/images/footer-bg.png')">
+            <div class="container">
+    
+                <div class="footer-brand">
+    
+                    <a href="#" class="logo">
+                        <ion-icon name="barbell-sharp" aria-hidden="true"></ion-icon>
+    
+                        <span class="span">Wellness Center</span>
+                    </a>
+    
+                    <p class="footer-brand-text">
+                        Etiam suscipit fringilla ullamcorper sed malesuada urna nec odio.
+                    </p>
+    
+                    <div class="wrapper">
+    
+                        <img src="./assets/images/footer-clock.png" width="34" height="34" loading="lazy" alt="Clock">
+    
+                        <ul class="footer-brand-list">
+    
+                            <li>
+                                <p class="footer-brand-title">Monday - Friday</p>
+    
+                                <p>7:00Am - 10:00Pm</p>
+                            </li>
+    
+                            <li>
+                                <p class="footer-brand-title">Saturday - Sunday</p>
+    
+                                <p>7:00Am - 2:00Pm</p>
+                            </li>
+    
+                        </ul>
+    
+                    </div>
+    
+                </div>
+    
+                <ul class="footer-list">
+    
+                    <li>
+                        <p class="footer-list-title has-before">Our Links</p>
+                    </li>
+    
+                    <li>
+                        <a href="./index.html" class="footer-link">Home</a>
+                    </li>
+    
+                    <li>
+                        <a href="./services.html" class="footer-link">Services</a>
+                    </li>
+    
+                    <li>
+                        <a href="./regpay.html" class="footer-link">Registration</a>
+                    </li>
+    
+                    <li>
+                        <a href="./faq.html" class="footer-link">FAQ</a>
+                    </li>
+    
+                </ul>
+    
+                <ul class="footer-list">
+    
+                    <li>
+                        <p class="footer-list-title has-before">Contact Us</p>
+                    </li>
+    
+                    <li class="footer-list-item">
+                        <div class="icon">
+                            <ion-icon name="location" aria-hidden="true"></ion-icon>
+                        </div>
+    
+                        <address class="address footer-link">
+                            1247/Plot No. 39, 15th Phase, Colony, Kukatpally, Hyderabad
+                        </address>
+                    </li>
+    
+                    <li class="footer-list-item">
+                        <div class="icon">
+                            <ion-icon name="call" aria-hidden="true"></ion-icon>
+                        </div>
+    
+                        <div>
+                            <a href="tel:18001213637" class="footer-link">1800-121-3637</a>
+    
+                            <a href="tel:+915552348765" class="footer-link">+91 555 234-8765</a>
+                        </div>
+                    </li>
+    
+                    <li class="footer-list-item">
+                        <div class="icon">
+                            <ion-icon name="mail" aria-hidden="true"></ion-icon>
+                        </div>
+    
+                        <div>
+                            <a href="mailto:info@fitlife.com" class="footer-link">info@fitlife.com</a>
+    
+                            <a href="mailto:services@fitlife.com" class="footer-link">services@fitlife.com</a>
+                        </div>
+                    </li>
+    
+                </ul>
+    
+                <ul class="footer-list">
+    
+                    <li>
+                        <p class="footer-list-title has-before">Our Newsletter</p>
+                    </li>
+    
+                    <li>
+                        <form action="" class="footer-form">
+                            <input type="email" name="email_address" aria-label="email" placeholder="Email Address"
+                                required class="input-field">
+    
+                            <button type="submit" class="btn btn-primary" aria-label="Submit">
+                                <ion-icon name="chevron-forward-sharp" aria-hidden="true"></ion-icon>
+                            </button>
+                        </form>
+                    </li>
+    
+                    <li>
+                        <ul class="social-list">
+    
+                            <li>
+                                <a href="#" class="social-link">
+                                    <ion-icon name="logo-facebook"></ion-icon>
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#" class="social-link">
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#" class="social-link">
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                </a>
+                            </li>
+    
+                        </ul>
+                    </li>
+    
+                </ul>
+    
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <div class="container">
+    
+                <p class="copyright">
+                    &copy; 2023 Wellness Center. All Rights Reserved By <a href="#"
+                        class="copyright-link">Chanuka.</a>
+                </p>
+    
+                <ul class="footer-bottom-list">
+    
+                    <li>
+                        <a href="#" class="footer-bottom-link has-before">Privacy Policy</a>
+                    </li>
+    
+                    <li>
+                        <a href="#" class="footer-bottom-link has-before">Terms & Condition</a>
+                    </li>
+    
+                </ul>
+    
+            </div>
+        </div>
+    
+    </footer>
 
 
     <script src="./assets/js/script.js"></script>
@@ -113,7 +340,9 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script>
-        includeHeader();
+        // includeComponents();
+        // includeHeader();
+        // loadContentFallback();
     </script>
 
 </body>

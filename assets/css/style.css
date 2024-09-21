@@ -1428,3 +1428,52 @@ body {
   background-color: var(--coquelicot);
   color: var(--white);
 }
+
+
+/* FAQ Styles */
+.faq-container {
+  margin-top: 40px;
+}
+
+.faq-item {
+  background-color: var(--white);
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: var(--radius-10);
+  box-shadow: var(--shadow-1);
+  cursor: pointer;
+  transition: var(--transition-1);
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding: 15px 0;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-4);
+  font-weight: var(--fw-700);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  color: var(--sonic-silver);
+  font-size: var(--fs-6);
+  line-height: 1.5;
+}
+
+.faq-toggle ion-icon {
+  font-size: 24px;
+  color: var(--coquelicot);
+}
+
+/* When the FAQ is active */
+.faq-item.active .faq-toggle ion-icon {
+  transform: rotate(180deg);
+}
+
